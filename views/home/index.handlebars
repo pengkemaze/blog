@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>我的博客</title>
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/fonts.css">
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <script src="./libs/jquery/jquery.min.js"></script>
+    <link rel="stylesheet" href="/home/css/normalize.css">
+    <link rel="stylesheet" href="/home/css/fonts.css">
+    <link rel="stylesheet" href="/home/css/base.css">
+    <link rel="stylesheet" href="/home/css/main.css">
+    <script src="/home/libs/jquery/jquery.min.js"></script>
 </head>
 <body>
     <div class="viewport">
         <!-- 头部 -->
-        <header class="header">
+        {{!-- <header class="header">
             <div class="wrapper">
                 <!-- 导航 -->
                 <nav>
@@ -26,12 +26,14 @@
                     <a href="./login.html">登录</a>
                 </div>
             </div>
-        </header>
+        </header> --}}
+        {{> header}}
         <!-- 主体 -->
         <div class="body">
             <div class="wrapper">
                 <!-- 侧边栏 -->
-                <aside>
+                {{> aside}}
+                {{!-- <aside>
                     <!-- 广告位 -->
                     <div class="widget advert">
                         <header>赞助商</header>
@@ -106,7 +108,7 @@
                             </li>
                         </ul>
                     </div>
-                </aside>
+                </aside> --}}
                 <section class="main">
                     <!-- 博客文章 -->
                     <article class="post">
@@ -173,7 +175,8 @@
             </div>
         </div>
         <!-- 底部 -->
-        <footer class="footer">
+        {{> footer}}
+        {{!-- <footer class="footer">
             <div class="wrapper">
                 <dl>
                     <dt>合作网站</dt>
@@ -214,11 +217,11 @@
                 <dl>
                     <dt>关注我的微信</dt>
                     <dd>
-                        <img class="qrcode" src="./images/qrcode.jpg" alt="">
+                        <img class="qrcode" src="/home/images/qrcode.jpg" alt="">
                     </dd>
                 </dl>
             </div>
-        </footer>
+        </footer> --}}
     </div>
 </body>
 </html>
